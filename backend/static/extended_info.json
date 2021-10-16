@@ -1,0 +1,59 @@
+{
+    "info": {
+        "url_png_icon_64x64": "https://www.sencha-stakepool.com/static/teapot_cropped_64x64_green.png",
+        "url_png_logo": "https://www.sencha-stakepool.com/static/teapot_cropped_green.png",
+        "location": "Colorado Springs, Colorado",
+        "social": {
+            "twitter_handle": "",
+            "telegram_handle": "@senchastakepool",
+            "facebook_handle": "",
+            "youtube_handle": "",
+            "twitch_handle": "",
+            "discord_handle": "",
+            "github_handle": ""
+        },
+        "company": {
+            "name": "Cellar Door Studio",
+            "addr": "",
+            "city": "Colorado Springs",
+            "country": "Colorado",
+            "company_id": "",
+            "vat_id": ""
+        },
+        "about": {
+            "me": "I currently work as a software engineer in...warm sunny Colorado! I love tea, particularly Japanese green tea, and pottery. I'm trying to merge the two with Cardano and hopefully something great will come out of it.",
+            "server": "Currently have two relays and all nodes are running on AWS EC2 t2.large servers.",
+            "company": "Sencha stakepool is the official pool of Cellar Door Studio, a small business run by my wife and I. We sell pottery, tea, and fiber arts. We're currently pretty small and I have very little time to spend in my studio but hopefully managing a stakepool will provide some extra income and in turn free up extra time for art."
+        }
+    },
+    "my-pool-ids": {
+        "0": "64742e1193b7e380c66e61c46fd66ac072f707c3dd38c86ef9ec7bf0",
+        "1": "pool1v36zuyvnkl3cp3nwv8zxl4n2cpe0wp7rm5uvsmhea3alqf6hzfu"
+    },
+    "when-satured-then-recommend": {
+        "0": "",
+        "1": ""
+    },
+    "telegram-admin-handle": {
+        "0": "@senchastakepool"
+    },
+    "adapools_ext": {
+        "prometheus": {
+            "0": {
+                "name": "Sencha Stakepool - Relay 1",
+                "type": "relay",
+                "key": "None"
+            },
+            "1": {
+                "name": "Sencha Stakepool - Relay 2",
+                "type": "relay",
+                "key": "None"
+            },
+            "2": {
+                "name": "Sencha Stakepool - Node",
+                "type": "bp",
+                "key": "None"
+            }
+        }
+    }
+}

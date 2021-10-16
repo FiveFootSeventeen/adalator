@@ -1,0 +1,44 @@
+
+## Pages ##
+* About
+  * Fees
+  * Hardware we are using
+* Calculator
+  * Calculator that calculates the amount of ADA a user will have under certian factors
+  * Input the expected value of ADA in X number of years and the app will interpolate the values inbetween to feed into the equation
+  * Factor in a predicted return of a stakepool after X number of years
+  * User can input an expected monthly investment in dollars and that will be translated to the expected amount of ADA that USD value will buy as the price of ADA appreciates.
+  * The amount in dollars invested on a monthly basis can also be interpolated between a starting value and an ending value
+  * User can request to download a spreadsheet of their prediction
+  * Plot the expected value of ADA and expected value of the user's investment
+
+## Calculator ##
+* Use machine learning to calculate the future value of ADA. Update each month
+* adalator.com
+
+## Treasure ##
+* New treasure every six epochs
+* The amount in this will grow as the pool grows and receives more rewards
+* Somewhere on one of the websites there is a treasure map. Just a list of directions to follow
+  that will lead the participant to click somewhere on the website which will lead them to the
+  list of clues they need to solve to open the treasure.
+* The treasure page's web address will change each time a new list of clues is released.
+  That page address will be the first 8 characters of the sha256 sum of the different clues. 
+  Ill also use that sha256 sum to compare the clues the user entered (take the sha256 sum of those) with
+  the correct ones. That way the user can click a button in the browser and compare their
+  answers with the correct ones without sending a request to my server or entering their
+  clues into yoroi.
+* Dont let the user's know this it makes it that much easier to hack/guess.
+
+## Treasure Map Ideas ##
+* Map of emojis
+* Make a game in Godot that the user have to traverse future implementations will
+  give an advantage to those who have been staking to the pool for a while.
+  -  The user receives a special token in their wallet every six epochs or something.
+  -  Users on the mailing list that have verified their staking address will receive
+     a special password for that epoch as long as they are still staked and have been
+     staked for the past six epochs.
+
+## Mailing List ##
+* Through mailjet reimplement the button that was on the website previously.
+* Send information about the month's treasure clues being released.

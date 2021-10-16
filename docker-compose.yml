@@ -1,0 +1,36 @@
+version: '2.0'
+services:
+  #    nginx:
+  #      image: nginx:1.20
+  #      ports:
+  #        - "8080:80"
+  #      expose:
+  #        - "80"
+
+    client:
+      container_name: client
+      build:
+        context: ./frontend
+        dockerfile: Dockerfile
+      ports:
+        - "3000:3000"
+      expose:
+        - "3000"
+      volumes:
+        - ./frontend/:/usr/app
+
+    server:
+      container_name: server
+      build:
+        context: ./backend
+        dockerfile: Dockerfile
+      ports:
+        - "6543:6543"
+          #        - "8080:8080"
+        - "80:80"
+      expose:
+        - "6543"
+        - "80"
+          #        - "8080"
+      volumes:
+        - ./backend:/app

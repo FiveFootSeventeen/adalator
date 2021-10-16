@@ -1,3 +1,1 @@
 # adalator
-# adalator
-# adalator
