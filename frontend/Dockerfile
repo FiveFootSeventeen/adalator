@@ -4,7 +4,7 @@ WORKDIR /usr/app
 
 COPY . .
 
-RUN npm ci
+RUN npm install
 
 EXPOSE 3000
 
