@@ -5,6 +5,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Link from '@mui/material/Link';
+
 
 export default function MaxWidthDialog(props) {
 
@@ -29,17 +31,35 @@ export default function MaxWidthDialog(props) {
             }}
           >
             <p>
-              The ADAlator is created and maintained by Pirate stakepool, stake to [YARRR] if you'd like to support the development of this site.
+              The ADAlator is created and maintained by Pirate stakepool, stake to&nbsp;
+              <Link target="_blank" rel="noreferrer" href="https://adapools.org/pool/34bba9993b1f587884e9b27513cb3168d8b410f20935231edaf3cb62" sx={{color: 'rgba(20, 83, 53, 1)'}} underline="hover">
+                {'[YARRR]'}
+              </Link> if you'd like to support the development of this site.
             </p>
             <p>
-              Future features I'd like to implement:
+              This tool is used to estimate the future value of your ADA using few inputs. Its basically a fancy compound interest calculator.
+              <br/>
+              <h3>All the columns on the left side are adjustable, here is an explanation of what they mean:</h3>
+              <b>Starting ADA Balance: </b>The amount of ADA you have in your wallet now.
+              <br/><b>Time to Grow: </b>The amount of time you plan to HODL your ADA and reinvest staking rewards.
+              <br/><b>Return on Stake: </b>An estimate of the return on the ADA staked to the pool you stake to (If you look up your pool on adapools.org this is the ROA parameter).
+              <br/><b>Monthly Contribution: </b>The amount of your target currency you plan to use each month to purchase ADA. (For example you may choose to invest $300 per month into ADA regardless of the price).
+              <br/><b>Starting Currency per ADA: </b>The amount of your target currency it takes to buy 1 ADA. This initial value is taken from the current USD/ADA market value and it is updated on each page load via CoinGecko's free API.
+              <br/><b>Yearly ADA Increase: </b>The amount you expect the value of ADA to increase on a yearly basis. For example if ADA is at $1.00 at the start of the year and it increases by 50% over that year it will then be valued at $1.50.
+            </p>
+            <p>
+              <h3>Future features I'd like to implement:</h3>
               <ul>
-                <li>Mobile device support</li>
+                <li>Better rendering/viewing on mobile device screen sizes</li>
                 <li>Machine learning to estimate the future price of ADA</li>
+                <li>Option to more closley match stakepool ROA to the actual rewards equation</li>
+                <li>Graphs of the change in the outputs over time</li>
+                <li>Downloadable excel spreadsheet with monthly data</li>
               </ul>
             </p>
             <p>
-              Questions, comments, or suggestions? Email: operator@piratestakepool.com
+              <h3>Questions, comments, or suggestions?</h3>
+              Email: operator@piratestakepool.com
             </p>
             <p>
             </p>
