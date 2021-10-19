@@ -51,7 +51,7 @@ export default function MaxWidthDialog(props) {
               <h3>Future features I'd like to implement:</h3>
               <ul>
                 <li>Better rendering/viewing on mobile device screen sizes</li>
-                <li>Machine learning to estimate the future price of ADA</li>
+                <li>Machine learning to better estimate the monthly change in the price of ADA.</li>
                 <li>Option to more closley match stakepool ROA to the actual rewards equation</li>
                 <li>Graphs of the change in the outputs over time</li>
                 <li>Downloadable excel spreadsheet with monthly data</li>
