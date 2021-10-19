@@ -52,6 +52,7 @@ export default function MaxWidthDialog(props) {
               <ul>
                 <li>Better rendering/viewing on mobile device screen sizes</li>
                 <li>Machine learning to better estimate the monthly change in the price of ADA.</li>
+                <li>Option to use logarithmic growth instead of a fixed percent</li>
                 <li>Option to more closley match stakepool ROA to the actual rewards equation</li>
                 <li>Graphs of the change in the outputs over time</li>
                 <li>Downloadable excel spreadsheet with monthly data</li>

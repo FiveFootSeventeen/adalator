@@ -12,10 +12,9 @@
   * User can request to download a spreadsheet of their prediction
   * Plot the expected value of ADA and expected value of the user's investment
   * Halving APR - usually every 4-5 years the percentage get halved after you stake, however it could stabilize when we get more transactions per second on the block chain
-  * Explain yearly ADA increase
-  * Explain each field
-  * Mention that the starting currency per ADA is taken from coin gecko
-  * Mention that every thing on the left is an input
+  * Submit to catalyst
+  * iOS/Android app
+  * Logarithmic growth instead of fixed percent
 
 https://www.beaver-stake-pool.net/post/how-are-stake-pool-rewards-calculated-where-do-they-come-from
 
