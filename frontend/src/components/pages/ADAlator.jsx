@@ -418,11 +418,23 @@ export default function ADAlator(props) {
         container
         direction="row"
         justify="flex-end"
+        justifyContent="space-evenly"
         alignItems="center"
       >
         <h5 style={{margin: ".5em", textAlign: "left"}}>Brought to you by:<br />
-          <Link target="_blank" rel="noreferrer" href="https://www.piratestakepool.com" sx={{color: 'rgba(90, 200, 150, .6)'}} underline="hover">
-            {'Pirate Pool [YARRR]'}
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href="https://adapools.org/pool/34bba9993b1f587884e9b27513cb3168d8b410f20935231edaf3cb62"
+            sx={{
+                fontSize: '1.2em',
+                fontFamily: 'Computer',
+                textDecorationColor: 'rgba(90, 200, 150, .4)',
+                color: 'rgba(90, 250, 150, .6)',
+            }}
+            underline="always"
+          >
+            {'[YARRR] Pirate'}
           </Link>
         </h5>
         <Grid item xs={6} >
