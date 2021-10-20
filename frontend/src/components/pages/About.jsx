@@ -32,7 +32,7 @@ export default function MaxWidthDialog(props) {
           >
             <p>
               The ADAlator is created and maintained by Pirate stakepool, stake to&nbsp;
-              <Link target="_blank" rel="noreferrer" href="https://adapools.org/pool/34bba9993b1f587884e9b27513cb3168d8b410f20935231edaf3cb62" sx={{color: 'rgba(20, 83, 53, 1)'}} underline="hover">
+              <Link target="_blank" rel="noreferrer" href="https://adapools.org/pool/34bba9993b1f587884e9b27513cb3168d8b410f20935231edaf3cb62" sx={{color: 'rgba(60, 160, 100, 255)'}} underline="hover">
                 {'[YARRR]'}
               </Link> if you'd like to support the development of this site.
             </p>

@@ -429,7 +429,7 @@ export default function ADAlator(props) {
             sx={{
                 fontSize: '1.2em',
                 fontFamily: 'Computer',
-                textDecorationColor: 'rgba(90, 200, 150, .4)',
+                textDecorationColor: 'rgba(120, 180, 140, 10)',
                 color: 'rgba(90, 250, 150, .6)',
             }}
             underline="always"
