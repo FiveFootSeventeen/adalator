@@ -13,6 +13,7 @@ import StopSharpIcon from '@mui/icons-material/StopSharp';
 import CheckBoxOutlineBlankSharpIcon from '@mui/icons-material/CheckBoxOutlineBlankSharp';
 import Link from '@mui/material/Link';
 import About from './About';
+import { calculateInterest } from './Calculate';
 
 const bckColor = "#6bc099";
 
@@ -94,6 +95,24 @@ export default function ADAlator(props) {
     }
   }
 
+  const calculate = () => {
+    calculateInterest(
+      {
+        "startingBalance": startingBalance,
+        "currencyPerAda": currencyPerAda,
+        "timeToGrowUnit": timeToGrowUnit,
+        "timeToGrow": timeToGrow,
+        "yearlyADAIncrease": yearlyADAIncrease,
+        "monthlyContribution": monthlyContribution,
+        "returnOnStake": returnOnStake,
+        "setFinalAdaPrice": setFinalAdaPrice,
+        "setTotalCurrencyInvested": setTotalCurrencyInvested,
+        "setTotalAdaPurchased": setTotalAdaPurchased,
+        "setFinalAda": setFinalAda,
+      }
+    );
+  };
+
   const handleChange = (event) => {
     const val = event.target.value;
     const id = event.target.id;
@@ -124,54 +143,6 @@ export default function ADAlator(props) {
     }
   }
 
-
-  function calculateInterest() {
-    let years, months;
-    let ADAContribMonth, monthlyADAIncrease;
-    let amount = startingBalance;
-    let totalADAPur = 0;
-    let totalCurrInv = 0;
-    let ADAPrice = parseFloat(currencyPerAda);
-    const time = 1 / 12;
-
-    if (timeToGrowUnit === "years") {
-      years = timeToGrow;
-      months = 0;
-    } else {
-      years = Math.trunc(timeToGrow / 12);
-      months = timeToGrow % 12;
-    }
-
-    for (let i = 0; i < years; i++) {
-      ADAPrice += ADAPrice * (yearlyADAIncrease / 100);
-      ADAContribMonth = monthlyContribution / ADAPrice;
-
-      amount += ((amount * ((1 + (returnOnStake / 100) / 12) ** 12 )) - amount);
-      amount += ADAContribMonth * 12;
-
-      totalCurrInv += monthlyContribution * 12;
-      totalADAPur += ADAContribMonth * 12;
-    }
-
-    monthlyADAIncrease = (ADAPrice * (yearlyADAIncrease / 100)) / 12;
-    for (let i = 0; i < months; i++) {
-      ADAPrice += monthlyADAIncrease;
-      ADAContribMonth = monthlyContribution / ADAPrice;
-
-      amount += (amount * ((1 + (returnOnStake / 100) / 1) ** time)) - amount;
-      amount += ADAContribMonth;
-
-      totalCurrInv += monthlyContribution;
-      totalADAPur += ADAContribMonth;
-    }
-
-
-    setFinalAdaPrice(ADAPrice);
-    setTotalCurrencyInvested(totalCurrInv);
-    setTotalAdaPurchased(totalADAPur);
-    setFinalAda(amount);
-  }
-
   const leftColumn =
     <Grid item xs={6}>
       <div>
@@ -184,7 +155,7 @@ export default function ADAlator(props) {
           label="Starting ADA Balance"
           variant="outlined"
           value={startingBalance}
-          onKeyDown={e => {e.key === 'Enter' && calculateInterest()}}
+          onKeyDown={e => {e.key === 'Enter' && calculate()}}
           onChange={handleChange}
           autoComplete="off"
         />
@@ -199,7 +170,7 @@ export default function ADAlator(props) {
           label="Time to Grow"
           variant="outlined"
           value={timeToGrow}
-          onKeyDown={e => {e.key === 'Enter' && calculateInterest()}}
+          onKeyDown={e => {e.key === 'Enter' && calculate()}}
           onChange={handleChange}
           autoComplete="off"
         />
@@ -248,7 +219,7 @@ export default function ADAlator(props) {
           label="Return on Stake (ROS/ROA)"
           value={returnOnStake}
           suffix={'%'}
-          onKeyDown={e => {e.key === 'Enter' && calculateInterest()}}
+          onKeyDown={e => {e.key === 'Enter' && calculate()}}
           onChange={handleROSChange}
           autoComplete="off"
         />
@@ -265,7 +236,7 @@ export default function ADAlator(props) {
           value={monthlyContribution}
           onChange={handleChange}
           autoComplete="off"
-          onKeyDown={e => {e.key === 'Enter' && calculateInterest()}}
+          onKeyDown={e => {e.key === 'Enter' && calculate()}}
         />
       </div>
       <div>
@@ -280,7 +251,7 @@ export default function ADAlator(props) {
           value={currencyPerAda}
           onChange={handleChange}
           autoComplete="off"
-          onKeyDown={e => {e.key === 'Enter' && calculateInterest()}}
+          onKeyDown={e => {e.key === 'Enter' && calculate()}}
         />
       </div>
       <div>
@@ -298,7 +269,7 @@ export default function ADAlator(props) {
           autoComplete="off"
           suffix={'%'}
           variant="outlined"
-          onKeyDown={e => {e.key === 'Enter' && calculateInterest()}}
+          onKeyDown={e => {e.key === 'Enter' && calculate()}}
         />
       </div>
     </Grid>
@@ -394,7 +365,7 @@ export default function ADAlator(props) {
           variant="outlined"
           InputProps={{
             readOnly: true,
-            disableUnderline: true
+            disableunderline: 'true'
           }}
         />
       </div>
@@ -409,7 +380,7 @@ export default function ADAlator(props) {
             minWidth: '90%'
           }}
           variant="text"
-          onClick={calculateInterest}
+          onClick={calculate}
         >
           Calculate
         </Button>

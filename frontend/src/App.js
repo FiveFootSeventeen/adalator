@@ -35,8 +35,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div id="interlace"></div>
-      <div class="scanline"></div>
-      <div class="App">
+      <div className="scanline"></div>
+      <div className="App">
         <ADAlator />
       </div>
     </ThemeProvider>
