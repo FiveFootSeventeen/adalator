@@ -31,7 +31,7 @@ export default function MaxWidthDialog(props) {
             }}
           >
             <p>
-              The ADAlator is created and maintained by Pirate stakepool, stake to&nbsp;
+              The ADAlator is created and maintained by Hoard stakepool, stake to&nbsp;
               <Link target="_blank" rel="noreferrer" href="https://cryptedhoard.com/pool" sx={{color: 'rgba(60, 160, 100, 255)'}} underline="hover">
                 {'[HORDE]'}
               </Link> if you'd like to support the development of this site.
