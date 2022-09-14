@@ -143,7 +143,7 @@ export default function ADAlator(props) {
     }
   }
 
-  const leftColumn =
+  const inputs =
     <Grid item xs={6}>
       <div>
         <CssTextField
@@ -274,7 +274,7 @@ export default function ADAlator(props) {
       </div>
     </Grid>
 
-  const rightColumn =
+  const outputs =
     <Grid item xs={6} >
       <div>
         <NumberFormat
@@ -396,7 +396,7 @@ export default function ADAlator(props) {
           <Link
             target="_blank"
             rel="noreferrer"
-            href="https://adapools.org/pool/34bba9993b1f587884e9b27513cb3168d8b410f20935231edaf3cb62"
+            href="https://cryptedhoard.com/pool"
             sx={{
                 fontSize: '1.2em',
                 fontFamily: 'Computer',
@@ -405,7 +405,7 @@ export default function ADAlator(props) {
             }}
             underline="always"
           >
-            {'[YARRR] Pirate'}
+            {'[HOARD] Hoard Stakepool'}
           </Link>
         </h5>
         <Grid item xs={6} >
@@ -441,8 +441,8 @@ export default function ADAlator(props) {
             direction="row"
             justify="center"
           >
-            {leftColumn}
-            {rightColumn}
+            {inputs}
+            {outputs}
           </Grid>
           <About setOpen={setOpen} open={open} />
         </Grid>
